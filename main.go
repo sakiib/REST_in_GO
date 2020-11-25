@@ -65,6 +65,7 @@ func deleteBook(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(books)
 }
 
+// Book struct
 type Book struct {
 	ID     string  `json:"id"`
 	Isbn   string  `json:"isbn"`
@@ -72,6 +73,7 @@ type Book struct {
 	Author *Author `json:"author"`
 }
 
+// Author struct
 type Author struct {
 	Firstname string `json:"firstname"`
 	Lastname  string `json:"lastname"`
